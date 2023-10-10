@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Substituir Nome por Nickname</title>
+    </head>
+    <body>
+        <fieldset>
+            <form action="">
+                <label for="nome">Digite seu nome:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    required
+                    placeholder="Digite seu nome"
+                />
+
+                <br /><br />
+
+                <label for="nickname">Digite seu nickname:</label>
+                <input
+                    type="text"
+                    id="nickname"
+                    required
+                    placeholder="Digite seu nickname"
+                />
+
+                <br /><br />
+                <button onclick="substituirNomePorNickname()">
+                    Substituir Nome por Nickname
+                </button>
+
+                <p id="resultado"></p>
+            </form>
+        </fieldset>
+        <script>
+            function substituirNomePorNickname() {
+                event.preventDefault();
+                let nome = document.getElementById("nome").value;
+                let nickname = document.getElementById("nickname").value;
+                document.getElementById("resultado").innerHTML = nome.replace(
+                    nome,
+                    `Olá, ${nickname}`
+                );
+            }
+        </script>
+    </body>
+</html>
