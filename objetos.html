@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // // objeto literal
+            // let lucas = {
+            //     nome: "Lucas",
+            //     sobrenome: "Ribeiro de Lacerda",
+            //     idade: 35,
+            // };
+
+            // lucas.cpf = "32784630803";
+
+            // //objeto tradicional
+            // let uiara = new Object();
+            // uiara.nome = "Uiara";
+            // uiara.sobrenome = "Ambrasio de Oliveira";
+
+            // console.log(lucas);
+            // console.log(uiara);
+
+            //inserir as duas pessoas no array e exibir seus nomes com foreach ou for
+
+            let lucas = {
+                nome: "Lucas",
+                sobrenome: "Ribeiro de Lacerda",
+                idade: 35,
+            };
+
+            let silvia = {
+                nome: "Silvia",
+                sobrenome: "Aparecida Ribeiro",
+                idade: 65
+            }
+
+            lucas.cpf = "32784630803";
+
+            let uiara = new Object();
+            uiara.nome = "Uiara";
+            uiara.sobrenome = "Ambrasio de Oliveira";
+
+            // Criar um array e inserir as três pessoas
+            let pessoas = [lucas, uiara, silvia];
+
+            // Usar um loop 'for' para exibir os nomes
+            for (let i = 0; i < pessoas.length; i++) {
+                console.log(pessoas[i].nome);
+            }
+
+            // Usar 'forEach' para exibir os nomes
+            pessoas.forEach(function (pessoa) {
+                console.log(pessoa.nome, pessoa.sobrenome);
+            });
+        </script>
+    </body>
+</html>
