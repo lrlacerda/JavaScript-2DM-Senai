@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+</head>
+<body>
+    <fieldset>
+        <form onsubmit="cadastrar(event)">
+            <label for="cep">CEP</label>
+            <input type="number" onblur="buscarEndereco(this.value)" placeholder="digite seu cep" autocomplete="on" id="cep">
+            <span id="not-found"></span>
+            <br><br>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" placeholder="digite seu endereço" id="endereco">
+            <br><br>
+
+            <label for="cidade">Cidade</label>
+            <input type="text" placeholder="digite seua Cidade" id="cidade">
+            <br><br>
+
+            <label for="estado">Estado</label>
+            <input type="text" placeholder="digite seu Estado" id="estado">
+            <br><br>
+
+            <button>Cadastrar</button>
+        </form>
+    </fieldset>
+   
+    <script src="./helloApi.js"></script>
+</body>
+</html>
