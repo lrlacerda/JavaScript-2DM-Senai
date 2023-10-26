@@ -1,0 +1,53 @@
+//criar um cadastro de frutas que exiba as frutas cadastradas em uma lista ul.
+//o programa deverá ter um formulário web. //o programa deverá utilizar arrays
+//a lista deverá aparacer em ordem alfabética você devera exibir os dados com
+foreach e utilizar arrow functions //Desafio Salvar a lista de frutas na api
+local com json-server
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Atividade</title>
+    </head>
+    <body>
+        <fieldset>
+            <h2>Cadastro de Frutas</h2>
+            <form id="fruitsForm">
+                <label for="fruitName">Nome da Fruta:</label><br />
+                <input type="text" id="fruitName" name="fruitName" placeholder="Digite a fruta" /><br /><br />
+                <button>Cadastrar</button>
+            </form>
+        </fieldset>
+        <h2>Lista de Frutas Cadastradas:</h2>
+        <ul id="fruitsList"></ul>
+
+        <script>
+            const fruits = [];
+
+            const fruitsForm = document.getElementById("fruitsForm");
+            const fruitsList = document.getElementById("fruitsList");
+
+            fruitsForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const fruitName = document.getElementById("fruitName").value;
+                fruits.push(fruitName);
+                fruits.sort();
+
+                displayFruits();
+                fruitsForm.reset();
+            });
+
+            const displayFruits = () => {
+                fruitsList.innerHTML = "";
+                fruits.forEach((fruit) => {
+                    const li = document.createElement("li");
+                    li.appendChild(document.createTextNode(fruit));
+                    fruitsList.appendChild(li);
+                });
+            };
+        </script>
+    </body>
+</html>
